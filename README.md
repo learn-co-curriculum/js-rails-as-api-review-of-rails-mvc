@@ -56,7 +56,7 @@ class CreateBirds < ActiveRecord::Migration[5.2]
 end
 ```
 
-Then run `rails db:migrate` to create the schema. We set this up first because
+Then run `rake db:migrate` to create the schema. We set this up first because
 we quickly move away from working directly with the database. With
 Rails, we actually want to create a model to represent and manipulate the data. Create
 the following `Bird` model in `app/models/bird.rb`:
@@ -72,7 +72,7 @@ end
 > `save` without having to include any additional methods.
 
 With a model and the database set up, we can add a little data to help display
-our view later. Some seed data is provided in `db/seeds.rb`; just run `rails
+our view later. Some seed data is provided in `db/seeds.rb`; just run `rake
 db:seed` and it should create four `Bird` records. You can always check these by
 running `rails console`, then use `Bird.all` to confirm these instances are appearing.
 
